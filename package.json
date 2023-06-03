@@ -1,0 +1,28 @@
+{
+  "name": "unocss-preset-primeflex",
+  "version": "0.0.1",
+  "description": "UnoCSS preset for primeflex",
+  "scripts": {
+    "build": "vite build demo",
+    "prepack": "tsc",
+    "preview": "vite preview demo --host",
+    "dev": "vite demo --host"
+  },
+  "repository": "kedniko/unocss-preset-primeflex",
+  "license": "MIT",
+  "author": "kedniko",
+  "type": "module",
+  "exports": "./index.js",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "dependencies": {},
+  "peerDependencies": {
+    "unocss": "^0.51.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4",
+    "vite": "^4.2.1"
+  }
+}
