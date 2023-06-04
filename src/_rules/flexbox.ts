@@ -1,4 +1,4 @@
-import { range } from "../_utils"
+import { mapUnitToRem, range } from "../_utils"
 
 const flexdirection = [
   ['flex-row', { 'flex-direction': 'row' }],
@@ -31,21 +31,10 @@ const flexshrink = [
 ]
 
 const gap = (() => {
-  const map = {
-    '0': '0',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '1rem',
-    '4': '1.5rem',
-    '5': '2rem',
-    '6': '3rem',
-    '7': '4rem',
-    '8': '5rem',
-  }
   const values = range(0, 8, n => [
-    [`gap-${n}`, { 'gap': map[n] }],
-    [`row-gap-${n}`, { 'row-gap': map[n] }],
-    [`column-gap-${n}`, { 'column-gap': map[n] }],
+    [`gap-${n}`, { 'gap': mapUnitToRem[n] }],
+    [`row-gap-${n}`, { 'row-gap': mapUnitToRem[n] }],
+    [`column-gap-${n}`, { 'column-gap': mapUnitToRem[n] }],
   ])
   return values.flat()
 })()
